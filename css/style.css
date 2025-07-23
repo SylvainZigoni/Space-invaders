@@ -12,8 +12,12 @@
 }
 
 .pixel {
-    background-color: red;
+    background-color: #ccc;
     border: solid 1px white;
     width: 20px;
     height: 20px;
+}
+
+.black-pixel {
+    background-color: black;
 }
