@@ -26,7 +26,7 @@ function handlePixel() {
 
 function handleClass() {
     // On execute handlepixel pour mettre en variable le tableau de tous nos pixels de la feuille    pixels = handlePixel();
-    pixels = handlePixel();
+    const pixels = handlePixel();
     // On fait une boucle sur l'ensemble des pixel de notre tableau pixels. (Ca permet de ne pas utiliser forEach)
     for (const pixelElt of pixels) {
         pixelElt.addEventListener("click", () => {
@@ -40,7 +40,7 @@ function handleClass() {
     }
 }
 
-handlePixel();
+handleClass();
 
 // On créé les élements dans le document et ensuite on les ajoute (append) dans le parent
 const formulaire = document.querySelector(".configuration");
