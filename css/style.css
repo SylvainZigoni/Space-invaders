@@ -1,0 +1,19 @@
+#invader {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.ligne{
+    border: solid 1px white;
+
+}
+
+.pixel {
+    background-color: red;
+    border: solid 1px white;
+    width: 20px;
+    height: 20px;
+}
