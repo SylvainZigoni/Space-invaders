@@ -1,5 +1,5 @@
 #invader {
-    background-color: #6259CD;
+    background-color: #6259cd;
     min-height: 80vh;
     display: flex;
     flex-direction: row;
@@ -8,8 +8,8 @@
 }
 
 .pixel {
-    background-color: #D2DAE2;
-    border: solid 2px #7F8D9A;
+    background-color: #d2dae2;
+    border: solid 2px #7f8d9a;
     width: 20px;
     height: 20px;
     margin: 0;
@@ -17,11 +17,11 @@
 
 .black-pixel {
     background-color: #485460;
-    border: solid 2px #1E272E;
+    border: solid 2px #1e272e;
 }
 
 .configuration {
-    background-color: #3148AD;
+    background-color: #3148ad;
     padding: 3rem;
     display: flex;
     justify-content: center;
@@ -31,7 +31,7 @@
 .form-pixel,
 .form-button {
     padding: 1rem;
-    border: solid 1px #3148AD;
+    border: solid 1px #3148ad;
 }
 
 .form-grille {
@@ -39,8 +39,43 @@
 }
 
 .form-button {
-    background-color: #9B68E4;
+    background-color: #9b68e4;
     color: white;
     border-radius: 0 10px 10px 0;
 }
 
+.colors-container {
+    background-color: #4b45a3;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.plain {
+    background-color: #d2dae2;
+    border: solid 2px #7f8d9a;
+}
+
+.empty {
+    background-color: #485460;
+    border: solid 2px #1e272e;
+}
+.light {
+    background-color: #fbc048;
+    border: solid 2px #f6a734;
+}
+
+.highlight {
+    background-color: #79ea83;
+    border: solid 2px #6cd373;
+}
+
+.petitRond {
+    margin: 6px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}

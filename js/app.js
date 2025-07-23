@@ -1,4 +1,23 @@
-// ton code ici
+//On créer notre tableau de couleurs et on l'incorpore au body
+const colors = ["plain", "empty", "light", "highlight"];
+const colorsContainer = document.createElement("div");
+colorsContainer.classList.add("colors-container");
+document.querySelector("body").appendChild(colorsContainer);
+//On fait une boucle pour créer chaque rond de couleurs
+for (let i = 0; i < colors.length; i++) {
+    const colorBubble = document.createElement("div");
+    colorBubble.classList.add(colors[i], "petitRond");
+    colorsContainer.appendChild(colorBubble);
+}
+//On fait une boucle pour récupérer la couleur du rond selectionné et on stock la classe dans la variable paintingColor
+let paintingColor = "";
+const handleColors = document.querySelectorAll(".petitRond");
+for (const petitRond of handleColors) {
+    petitRond.addEventListener("click", () => {
+        paintingColor = petitRond.classList.value;
+        return paintingColor;
+    });
+}
 
 // On récupère l'endroit ou seront crées les 8 lignes
 const container = document.querySelector("#invader");
@@ -30,12 +49,18 @@ function handleClass() {
     // On fait une boucle sur l'ensemble des pixel de notre tableau pixels. (Ca permet de ne pas utiliser forEach)
     for (const pixelElt of pixels) {
         pixelElt.addEventListener("click", () => {
+            //On écrase les classes existantes pour les remplacer par celle de paintingColor
+            pixelElt.setAttribute("class", paintingColor);
+            //On retire la classe petitRond
+            pixelElt.classList.remove("petitRond");
+            //On ajoute la class pixel
+            pixelElt.classList.add("pixel");
             // Comme notre pixel a 2 classes dans le if pour voir s'il a le nom black pixel, il faut bien mettre class1 + class2.
-            if (pixelElt.className == "pixel black-pixel") {
-                pixelElt.classList.remove("black-pixel");
-            } else {
-                pixelElt.classList.add("black-pixel");
-            }
+            // if (pixelElt.className == "pixel black-pixel") {
+            //     pixelElt.classList.remove("black-pixel");
+            // } else {
+            //     pixelElt.classList.add("black-pixel");
+            // }
         });
     }
 }
@@ -125,5 +150,3 @@ function addUserInput() {
 
 //On execute la fonction qui modifie la grille grace aux données demandées par l'utilisateuren cliquant sur le bouton
 buttonElt.addEventListener("click", addUserInput);
-
-//Créer une fonction pour ajouter un pixel de la taille demandée (taille du pixel)
