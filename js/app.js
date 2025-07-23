@@ -35,7 +35,32 @@ for (const pixelElt of pixels) {
         }
     });
 }
+// On créé les élements dans le document et ensuite on les ajoute (append) dans le parent
+const formulaire = document.querySelector('.configuration');
+const sizeFormElt = document.createElement('input');
+const sizePixelElt = document.createElement('input');
+const buttonElt = document.createElement('button');
+formulaire.appendChild(sizeFormElt);
+formulaire.appendChild(sizePixelElt);
+formulaire.appendChild(buttonElt);
+
+sizeFormElt.setAttribute("placeholder", "Taille de la grille");
+sizePixelElt.setAttribute("placeholder", "Taille des pixels");
+buttonElt.textContent = "Valider";
+
+sizeFormElt.classList.add("form-grille");
+sizePixelElt.classList.add("form-pixel");
+buttonElt.classList.add("form-button");
 
 
 
+// Créer une fonction qui efface l'existant quand on appuie sur le bouton valider
 
+//Faire en sorte qu'appuyer sur le bouton valider ne rafraichisse pas la page
+
+//Récupérer la taille de la grille 
+//Récupérer la taille des pixels
+
+//Créer une fonction pour ajouter une ligne 
+//Créer une fonction pour ajouter un pixel de la taille demandée (taille du pixel)
+//Créer une boucle qui utilise le nombre demandé par l'utilisateur (taille de grille)
