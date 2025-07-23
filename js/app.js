@@ -13,8 +13,16 @@ for (let i = 0; i < colors.length; i++) {
 let paintingColor = "";
 const handleColors = document.querySelectorAll(".petitRond");
 for (const petitRond of handleColors) {
+    // Mise en place d'une boucle pour modifier la taille de l'element selectionné
     petitRond.addEventListener("click", () => {
+        // Mise en place d'une boucle dans la boucle pour remettre tous les petits ronds à la taille initiale
+        for (const petitRond2 of handleColors) {
+            petitRond2.style.height = "30px";
+            petitRond2.style.width = "30px";
+        }
         paintingColor = petitRond.classList.value;
+        petitRond.style.height = "40px";
+        petitRond.style.width = "40px";
         return paintingColor;
     });
 }
